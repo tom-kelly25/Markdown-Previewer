@@ -9,7 +9,21 @@ marked.setOptions({
 const renderer = new marked.Renderer();
 
 function App() {
-  const [text, setText] = React.useState("");
+  const [text, setText] = React.useState(`
+  ## H2
+  Bold	**bold text**
+  Italic	*italicized text*
+  Blockquote	> blockquote
+  Code	\`code\`
+  Horizontal Rule	---
+  Link	[title](https://www.example.com)
+  \`\`\`
+  {
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 25
+  }
+  \`\`\``);
 
   return (
     <div className="text-center px-4">
